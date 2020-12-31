@@ -1,1 +1,65 @@
-{{object_list}}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aman Goyal - Timeline</title>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css'>
+    <link rel="stylesheet" href="{% static 'timeline/style.css' %}">
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <div class="title">
+        <h2>Responsive Vertical Timeline</h2>
+        <p><a href="https://htmlcodex.com/css-timeline">More timeline designs</a></p>
+    </div>
+    <div class="timeline">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="timeline-container">
+
+                        <div class="timeline-end">
+                            <p>Now</p>
+                        </div>
+                        
+                        <div class="timeline-continue">
+                            {% for year, card_list in timeline_data.items %}
+                                {% for card  in card_list %}
+                                    {% if forloop.counter|divisibleby:2 %}
+                                        {% include 'timeline/snippets/right_card.html' with heading=card.heading date=card.date body=card.body %}
+                                    {% else %} 
+                                        {% include 'timeline/snippets/left_card.html'  with heading=card.heading date=card.date body=card.body %}
+                                    {% endif %}
+                                {% endfor %}
+        
+                                {% include 'timeline/snippets/year_circle.html' with year=year %}                    
+                            {% endfor %}
+                        </div>
+
+                        <div class="timeline-start">
+                            <p>Launch</p>
+                        </div>
+
+                        <div class="timeline-launch">
+                            <div class="timeline-box">
+                                <div class="timeline-text">
+                                    <h3>Launched our company on 01 Jan 2019</h3>
+                                    <p>Lorem ipsum dolor sit amet</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- partial -->
+
+</body>
+
+</html>

@@ -4,5 +4,5 @@ from django.urls import path
 from timeline import views as timeline_views
 
 urlpatterns = [
-    path('', timeline_views.CardListView.as_view(), name='timeline-home'),
+    path('', timeline_views.CardView.as_view(), name='timeline-home'),
 ]
