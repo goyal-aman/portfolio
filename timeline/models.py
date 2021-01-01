@@ -10,4 +10,4 @@ class Card(models.Model):
     date = models.DateField(default=timezone.now, null=False, blank=False)
 
     def __str__(self) -> str:
-        return f"{self.body[:20]}.. on {self.date}"
+        return f"{self.heading}.. on {self.date}"
