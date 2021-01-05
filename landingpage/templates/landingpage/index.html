@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>iPortfolio Bootstrap Template - Index</title>
+  <title>Portfolio Aman Goyal - Home</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -14,8 +14,10 @@
   <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 
   <!-- Favicons -->
-  <link href="{% static 'landingpage/img/favicon.png' %}" rel="icon">
-  <link href="{% static 'landingpage/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'landingpage/favicon/apple-touch-icon.png' %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'landingpage/favicon/favicon-32x32.png' %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'landingpage/favicon/favicon-16x16.png' %}">
+  <link rel="manifest" href="{% static 'landingpage/favicon/site.webmanifest' %}">
 
   <!-- Google Fonts -->
   <link
@@ -60,8 +62,10 @@
           <!-- <a href="{% url 'timeline-home' %}" class="google-plus"><i class="bx bxl-skype"></i></a> -->
           <a href="https://www.linkedin.com/in/ln-amangoyal/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
           <a href="https://dev.to/goyalaman" class="devto"><i class="bx bxl-dev-to"></i></a>
-          <a href="https://blog.amangoyal.ml/" class="devto"><iconify-icon data-icon="cib-hashnode"></iconify-icon></i></a>
-          
+          <a href="https://blog.amangoyal.ml/" class="devto">
+            <iconify-icon data-icon="cib-hashnode"></iconify-icon></i>
+          </a>
+          <a href="https://github.com/goyal-aman" class="bx-bxl-github"><i class="bx bxl-github"></i></a>
         </div>
       </div>
 
@@ -83,7 +87,7 @@
 
   <!-- ======= Hero Section ======= -->
   <main id="main">
-    <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <section id="hero" class="d-flex flex-column justify-content-center align-items-center" style="background-image: url('{% static 'landingpage/img/hero-bg-aman-trimmed.jpg' %}') ;">
       <div class="hero-container" data-aos="fade-in">
         <h1>Aman Goyal</h1>
         <p>I'm <span class="typed" data-typed-items="Developer, Developer, Engineer, Student"></span></p>
@@ -99,16 +103,13 @@
           <p>Enthusiastic Software Developer eager to
             contribute to team success through hard work,
             attention to detail and excellent organizational
-            skills. Proven skills in leadership. I love reading,
-            creating new stuff every day. Curiosity drives me.
-            Always up for new challenges. I am quick to learn
-            and willing to adapt to any job.
+            skills. Proven skills in leadership. 
           </p>
         </div>
 
         <div class="row">
           <div class="col-lg-4" data-aos="fade-right">
-            <img src="{% static 'landingpage/img/profile-img.jpg' %}" class="img-fluid" alt="">
+            <img src="{% static 'landingpage/img/aman-profile-img.jpg' %}" class="img-fluid" alt="">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
             <h3>Software Developer.</h3>
@@ -134,10 +135,7 @@
                 </ul>
               </div>
             </div>
-            <p>Enthusiastic Software Developer eager to
-              contribute to team success through hard work,
-              attention to detail and excellent organizational
-              skills. Proven skills in leadership. I love reading,
+            <p>I love reading,
               creating new stuff every day. Curiosity drives me.
               Always up for new challenges. I am quick to learn
               and willing to adapt to any job.
@@ -154,9 +152,7 @@
 
         <div class="section-title">
           <h2>Facts</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-            in iste officiis commodi quidem hic quas.</p>
+          <p>Did 9 Projects counting upto 412+ hours of skill-fully invested time. Accouting for  160+ commits on github and 2 Blog Post ( Available on Dev.to and blog.amangoyal.ml ).</p>
         </div>
 
         <div class="row no-gutters">
@@ -193,7 +189,7 @@
               <i class="icofont-clock-time"></i>
               <!-- <span data-toggle="counter-up">412&nbsp+</span> -->
               <span data-toggle="counter-up">412</span>
-              <p><strong>Hours</strong> intvested in 2020 </p>
+              <p><strong>Hours</strong> invested in 2020 </p>
             </div>
           </div>
 
