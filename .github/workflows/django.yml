@@ -21,3 +21,11 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+    - name: Run collectstatic
+      run: python manage.py collectstatic
+    - name: Run makemigrations
+      run: python manage.py makemigrations
+    - name: Run migrate
+      run: python manage.py migrate
+    - name: Run tests
+      run: python manage.py test
