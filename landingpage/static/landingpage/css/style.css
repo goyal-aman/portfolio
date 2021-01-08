@@ -74,10 +74,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header .profile img {
-  margin: 15px auto;
+  /* margin: 15px auto; */
   display: block;
-  width: 120px;
-  border: 8px solid #2c2f3f;
+  /* width: 120px; */
+  /* border: 8px solid #2c2f3f; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 #header .profile h1 {
@@ -218,10 +222,6 @@ h1, h2, h3, h4, h5, h6 {
   content: "";
   background: rgba(0, 0, 0, 0);
   position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
   z-index: 1;
 }
 
@@ -259,9 +259,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
+  /* aman goyal text for small windows*/
   #hero h1 {
-    font-size: 28px;
-    line-height: 36px;
+    font-size: 60px;
+    line-height: 50px;
   }
   #hero h2 {
     font-size: 18px;
@@ -779,7 +780,7 @@ section {
 }
 
 .contact .info .social-links {
-  padding-left: 60px;
+  padding-left: 50px;
 }
 
 .contact .info .social-links a {
@@ -1077,4 +1078,25 @@ section {
     width: auto;
     padding-right: 20px 15px;
   }
+}
+
+.social-icons .social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #495057;
+  color: #fff;
+  border-radius: 100%;
+  font-size: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.social-icons .social-icon:last-child {
+  margin-right: 0;
+}
+
+.social-icons .social-icon:hover {
+  background-color: #bd5d38;
 }
