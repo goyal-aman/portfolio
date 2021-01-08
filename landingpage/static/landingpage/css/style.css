@@ -1100,3 +1100,14 @@ section {
 .social-icons .social-icon:hover {
   background-color: #149ddd;
 }
+
+/* to hide profile image in about section in desktop */
+@media screen and (min-width: 1200px) {
+
+  /* USE THESE CLASSES TO HIDE CONTENT ON MOBILE */
+ .mobile-hide {
+    display: none !important;
+    align-items: center;
+ }
+
+}
