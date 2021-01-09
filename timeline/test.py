@@ -17,8 +17,14 @@ class TestCardView(BaseTestView, TestCase):
 
 class TestCardModel(TestCase):
     def setUp(self) -> None:
-        self.card1 = mixer.blend('timeline.Card')
-        self.card2 = mixer.blend('timeline.Card')
+        self.card1 = Card.objects.create(
+            body = "this is body 1",
+            heading = "this is heading 1"
+        )
+        self.card2 = Card.objects.create(
+            body = "this is body 2",
+            heading = "this is heading 2"
+        )
 
     def test_card_count(self):
         self.assertTrue(Card.objects.count() == 2)
