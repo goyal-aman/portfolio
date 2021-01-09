@@ -4,12 +4,9 @@ from django.views.generic import View
 
 # Create your tests here.
 
-class BaseTestUrl:
+class BaseTest:
+    """ Base Test Class """
 
-    url_name : str
-    view_class : View
-    url_route  : str
-    
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.client = Client()
@@ -22,7 +19,14 @@ class BaseTestUrl:
         response = self.client.get(path)
         resolver = resolve(path)
         return response, resolver
+        
 
+class BaseTestUrl(BaseTest):
+
+    url_name : str
+    view_class : View
+    url_route  : str
+    
     def test_url_response(self):
         self.assertTrue(self.response.status_code==200)
     
