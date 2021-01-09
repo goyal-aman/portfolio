@@ -1,0 +1,37 @@
+from django.test import Client 
+from django.urls import resolve, reverse
+from django.views.generic import View
+
+# Create your tests here.
+
+class BaseTestUrl:
+
+    url_name : str
+    view_class : View
+    url_route  : str
+    
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.client = Client()
+        self.response, self.resolver = \
+            self.get_response_and_resolver(self.client)
+
+    def get_response_and_resolver(self, client):
+        """ method to get `response` and `resovler object` of curr `url_name` """
+        path = reverse(self.url_name)
+        response = self.client.get(path)
+        resolver = resolve(path)
+        return response, resolver
+
+    def test_url_response(self):
+        self.assertTrue(self.response.status_code==200)
+    
+    def test_url_view_used(self):
+        self.assertTrue(self.resolver.func.view_class==self.view_class)
+    
+    def test_url_name(self):
+        self.assertTrue(self.resolver.url_name==self.url_name)
+    
+    def test_url_route(self):
+        self.assertTrue(self.resolver.route==self.url_route)
+    
