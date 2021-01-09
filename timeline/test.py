@@ -1,5 +1,4 @@
 from django.test import TestCase 
-from mixer.backend.django import mixer
 
 #local imports 
 from portfolio.test import BaseTestUrl , BaseTestView
