@@ -27,5 +27,12 @@ jobs:
       run: python manage.py makemigrations
     - name: Run migrate
       run: python manage.py migrate
+
+    - name: Run makemigrations on timeline app
+      run: python manage.py makemigrations timeline
+    - name: Run migrate on timeline app
+      run: python manage.py migrate timeline
+
+
     - name: Run tests
       run: python manage.py test
