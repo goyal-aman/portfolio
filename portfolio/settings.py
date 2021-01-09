@@ -133,4 +133,5 @@ STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # HEROKU config
-django_heroku.settings(locals())
+if os.getenv("ON_HEROKU", False):
+    django_heroku.settings(locals())
