@@ -39,3 +39,20 @@ class BaseTestUrl(BaseTest):
     def test_url_route(self):
         self.assertTrue(self.resolver.route==self.url_route)
     
+class BaseTestView(BaseTest):
+    url_name : str 
+    template_name  : str
+
+    # TODO: add test to check context data returned by view | maybe this is custom to each view?
+
+    def test_view_url_name(self):
+        """ test urlpattern used by views (name parameter of url_pattern) """
+        self.assertTrue(self.resolver.url_name==self.url_name)
+        assert True
+
+    def test_view_template_name(self):
+        """ test template used by view  """
+        self.assertTemplateUsed(self.response, self.template_name)
+    
+    def test_view_response(self):
+        self.assertTrue(self.response.status_code==200)
