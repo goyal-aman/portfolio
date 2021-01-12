@@ -12,8 +12,11 @@
             <div class="timeline-text">
                 <center>
                 <h3>{{heading|title }}</h3>
-                <p>{{body}}</p>
                 </center>
+            <p align="justify">{{body}}</p>
+            {% if url %}
+                <p align="right"><a href={{url}} class="btn btn-sm btn-secondary">click here</a></p>          
+            {% endif %}   
             </div>
         </div>
     </div>

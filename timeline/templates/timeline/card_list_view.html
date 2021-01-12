@@ -36,9 +36,9 @@
                                     {% for year, card_list in timeline_data.items %}
                                     {% for card in card_list %}
                                     {% if forloop.counter|divisibleby:2 %}
-                                    {% include 'timeline/snippets/right_card.html' with heading=card.heading date=card.date body=card.body %}
+                                    {% include 'timeline/snippets/right_card.html' with heading=card.heading date=card.date body=card.body url=card.link %}
                                     {% else %}
-                                    {% include 'timeline/snippets/left_card.html' with heading=card.heading date=card.date body=card.body %}
+                                    {% include 'timeline/snippets/left_card.html' with heading=card.heading date=card.date body=card.body url=card.link %}
                                     {% endif %}
                                     {% endfor %}
                                     {% include 'timeline/snippets/year_circle.html' with year=year %}
