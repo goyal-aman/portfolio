@@ -79,11 +79,13 @@
                     <li class="active"><a href="{% url 'home'  %}#main"><i class="bx bx-home"></i> <span>Home</span></a>
                     </li>
                     <li><a href="{% url 'home' %}#about"><i class="bx bx-user"></i> <span>About</span></a></li>
+                    <li><a href="{% url 'home' %}#stats"><i class="bx bx-stats"></i> <span>Stats</span></a></li>
                     <li><a href="{% url 'home' %}#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-                    <li><a href="{% url 'timeline-home' %}"><i class="bx bx-book-content"></i> Timeline</a></li>
+                    <li><a href="{% url 'home' %}#skills"><i class="bx bx-bulb"></i> <span>Skills</span></a></li>
                     <!-- <li><a href="#services"><i class="bx bx-server"></i> Services</a></li> -->
                     <li><a href="{% url 'home' %}#contact"><i class="bx bx-envelope"></i> Contact</a></li>
-
+                    <hr color="grey">
+                    <li><a href="{% url 'timeline-home' %}"><i class="bx bx-book-content"></i> Timeline</a></li>
                 </ul>
             </nav><!-- .nav-menu -->
             <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>

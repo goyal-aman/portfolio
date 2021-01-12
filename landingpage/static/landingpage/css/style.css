@@ -340,6 +340,56 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Stats
+--------------------------------------------------------------*/
+.stats {
+  padding-bottom: 30px;
+}
+
+.stats .count-box {
+  padding: 30px;
+  width: 100%;
+}
+
+.stats .count-box i {
+  display: block;
+  font-size: 44px;
+  color: #149ddd;
+  float: left;
+}
+
+.stats .count-box span {
+  font-size: 48px;
+  line-height: 40px;
+  display: block;
+  font-weight: 700;
+  color: #050d18;
+  margin-left: 60px;
+}
+
+.stats .count-box p {
+  padding: 15px 0 0 0;
+  margin: 0 0 0 60px;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  color: #122f57;
+}
+
+.stats .count-box a {
+  font-weight: 600;
+  display: block;
+  margin-top: 20px;
+  color: #122f57;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  transition: ease-in-out 0.3s;
+}
+
+.stats .count-box a:hover {
+  color: #1f5297;
+}
+
+/*--------------------------------------------------------------
 # Facts
 --------------------------------------------------------------*/
 .facts {
