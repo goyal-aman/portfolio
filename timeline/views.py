@@ -2,7 +2,7 @@ from typing import List
 from django.shortcuts import render
 from django.views.generic import ListView, View
 # local imports
-from timeline.models import Card, Link
+from timeline.models import Card
 
 # general imports
 from collections import defaultdict
