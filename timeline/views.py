@@ -13,7 +13,7 @@ from collections import defaultdict
 class CardView(View):
     template_name = 'timeline/card_list_view.html'
     def get(self, request):
-        cards = Card.objects.all()
+        cards = Card.objects.all().order_by('-date')
 
         qs = defaultdict(list)
         for query in cards:
