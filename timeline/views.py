@@ -12,8 +12,8 @@ from collections import defaultdict
 class CardView(View):
     template_name = 'timeline/card_list_view.html'
     def get(self, request):
-        cards = Card.objects.all().order_by('-date').values()
-        
+        cards = Card.objects.all().values()
+
         qs = defaultdict(list)
         for query in cards:
             card_year = query['date'].year
