@@ -4,4 +4,6 @@ from django.contrib import admin
 from timeline.models import Card, Link
 # Register your models here.
 admin.site.register(Card)
-admin.site.register(Link)
+
+#added Link model to admin
+admin.site.register(Link) 
