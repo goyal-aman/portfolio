@@ -3,7 +3,7 @@ from django.test import TestCase
 #local imports 
 from portfolio.test import BaseTestUrl , BaseTestView
 from timeline import views as timeline_views 
-from timeline.models import Card
+from timeline.models import Card, Link
 
 class TestTimelineHomeUrl(BaseTestUrl, TestCase):
     url_name = 'timeline-home'
@@ -16,6 +16,7 @@ class TestCardView(BaseTestView, TestCase):
 
 class TestCardModel(TestCase):
     def setUp(self) -> None:
+        link = Link.objects.create(url='www.example.com')
         self.card1 = Card.objects.create(
             body = "this is body 1",
             heading = "this is heading 1"
@@ -25,8 +26,14 @@ class TestCardModel(TestCase):
             heading = "this is heading 2"
         )
 
+        self.card3 = Card.objects.create(
+            body = "body3",
+            heading = "heading3",
+            link = link
+        )
+
     def test_card_count(self):
-        self.assertTrue(Card.objects.count() == 2)
+        self.assertTrue(Card.objects.count() == 3)
     
     def test_card_update(self):
         card1 = Card.objects.first()
@@ -49,3 +56,31 @@ class TestCardModel(TestCase):
     
         self.assertTrue(card2.body=="new_body2")
         self.assertTrue(card2.heading=="new_heading2")
+    
+    def test_card_with_link(self):
+        card = Card.objects.get(id=3)
+        self.assertTrue(card.link.url == "www.example.com")
+    
+    def test_card_with_link_url_update(self):
+        """ testing that changing url of card link workd """
+        card = Card.objects.get(id=3)
+        old_link = card.link
+        new_link = "www.update.com"
+        card.link.url = new_link
+        card.save()
+
+        self.assertFalse(card.link.url==old_link)
+        self.assertTrue(card.link.url==new_link)
+
+    def test_card_with_link_delete(self):
+        """ testing when link is deleted, its value is set to null in `link` field in card """
+        
+        # confirming card has link before testing
+        card = Card.objects.get(id=3)
+        self.assertTrue(card.link!=None)
+        
+        # actual test
+        link = Link.objects.first()
+        link.delete()
+        card = Card.objects.get(id=3)
+        self.assertTrue(card.link == None)
