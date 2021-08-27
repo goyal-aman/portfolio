@@ -8,3 +8,8 @@ class HomePageView(View):
 
     def get(self, request):
         return render(request, self.template_name)
+
+class ProjectView(View):
+    template_name = 'landingpage/portfolio-details.html'
+    def get(self, request):
+        return render(request, self.template_name)

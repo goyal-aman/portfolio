@@ -3,6 +3,7 @@ from django.utils import timezone
 
 class Link(models.Model):
     url = models.URLField()
+    name = models.CharField(default="", null=True, blank=True, max_length=999)
 
     def __str__(self):
         return self.url

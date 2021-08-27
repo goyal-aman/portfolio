@@ -1,3 +1,6 @@
+{% extends 'landingpage/base.html' %}
+{% load static %}
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,8 +13,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{% static 'landingpage/assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'landingpage/assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -96,9 +99,9 @@
         <div class="portfolio-details-container">
 
           <div class="owl-carousel portfolio-details-carousel">
-            <img src="assets/img/portfolio-details-1.jpg" class="img-fluid" alt="">
-            <img src="assets/img/portfolio-details-2.jpg" class="img-fluid" alt="">
-            <img src="assets/img/portfolio-details-3.jpg" class="img-fluid" alt="">
+            <img src="{% static 'landingpage/img/portfolio/portfolio-1.jpg' %}" class="img-fluid" alt="">
+            <img src="{% static 'landingpage/img/portfolio/portfolio-4.jpg' %}" class="img-circle" alt="">
+            <img src="{% static 'landingpage/assets/img/portfolio-details-1.png' %}" class="img-fluid" alt="">
           </div>
 
           <div class="portfolio-info">
@@ -157,8 +160,10 @@
   <script src="assets/vendor/aos/aos.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="{% static 'landingpage/assets/js/main.js' %}"></script>
 
 </body>
 
 </html>
+
+{% endblock content %}
