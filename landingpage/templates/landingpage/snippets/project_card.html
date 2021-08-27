@@ -1,5 +1,5 @@
 {% load static %}
-<div class="col-lg-4 col-md-6 portfolio-item filter-text">
+<div class="col-lg-4 col-md-6 portfolio-item filter-text" >
     <div class="portfolio-wrap">
 
         <!-- TODO : add defualt image url -->
@@ -15,6 +15,6 @@
                 <a href="{{details_link}}" title="More Details"><i class="bx bxs-file"></i></a>
             {% endif %}
         </div>
-        <legend><b>{{heading}}</b></legend>
+        <h6 style="align-items: center; text-align: left; padding-top:5px; padding-left:1px; padding-bottom:5px; background-color: rgb(2, 6, 73); color:white; s"><b>{{heading|title}}</b></h6>
     </div>
 </div>
