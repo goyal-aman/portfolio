@@ -1,0 +1,20 @@
+{% load static %}
+<div class="col-lg-4 col-md-6 portfolio-item filter-text">
+    <div class="portfolio-wrap">
+
+        <!-- TODO : add defualt image url -->
+        <!-- THIS IS PROJECT THUMBNAIL -->
+        <img src={{url}} class="img-fluid" alt="">
+
+
+        <div class="portfolio-links">
+            {% if live_link %}
+                <a href="{{live_link}}" data-gall="portfolioGallery" class="" title="Live Project"><i class="bx bx-plus"></i></a>
+            {% endif %}
+            {% if details_link %}
+                <a href="{{details_link}}" title="More Details"><i class="bx bxs-file"></i></a>
+            {% endif %}
+        </div>
+        <legend><b>{{heading}}</b></legend>
+    </div>
+</div>
