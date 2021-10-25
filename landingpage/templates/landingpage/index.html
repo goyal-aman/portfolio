@@ -7,11 +7,6 @@
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
       <h1>Aman Goyal</h1>
-      {% if data.link %}
-      <a href="{{ data.link }}" target="_blank"><u>Download Resume</u></a>
-      {% endif %}
-    </div>
-    <div class="hero-container" data-aos="fade-in">
       <p>I'm <span class="typed" data-typed-items="Developer, Developer, Engineer, Student"></span></p>
     </div>
 
@@ -293,14 +288,13 @@
 
       <div class="row portfolio-container" data-aos="" data-aos-delay="">
         {% for project in project_data %}
-        {% include 'landingpage/snippets/project_card.html' with heading=project.heading url=project.image_link
-        live_link=project.live_link details_link=project.details_link %}
+        {% include 'landingpage/snippets/project_card.html' with heading=project.heading url=project.image_link live_link=project.live_link details_link=project.details_link %}
         {% endfor %}
 
       </div>
 
     </div>
-  </section>
+  </section> 
   <!-- End Portfolio Section -->
 
   <!-- ======= Services Section ======= -->
