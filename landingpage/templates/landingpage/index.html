@@ -292,7 +292,8 @@
 
       <div class="row portfolio-container" data-aos="" data-aos-delay="">
         {% for project in project_data %}
-        {% include 'landingpage/snippets/project_card.html' with heading=project.heading url=project.image_link live_link=project.live_link details_link=project.details_link %}
+        {% include 'landingpage/snippets/project_card.html' with heading=project.heading url=project.image_link
+        live_link=project.live_link details_link=project.details_link %}
         {% endfor %}
 
       </div>
