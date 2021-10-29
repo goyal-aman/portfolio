@@ -11,4 +11,4 @@ class ResumeLink(models.Model):
     is_active = models.BooleanField(default=False)
 
     def __str__(self):
-        return f"{name[:30]}.. url:{url[:30]}"
+        return f"{self.name[:30]}.. url:{self.url[:30]}"
