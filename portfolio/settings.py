@@ -34,6 +34,7 @@ ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "")
 # Application definition
 
 INSTALLED_APPS = [
+    'download_resume_pdf',
     'landingpage',
     'timeline',
     'django.contrib.admin',
