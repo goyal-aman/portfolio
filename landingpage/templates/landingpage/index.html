@@ -19,7 +19,17 @@
         <iconify-icon data-icon="cib-hashnode"></iconify-icon>
       </a>
     </div>
-
+    
+    {% if resume_url %}
+      <div style="margin-top: 1rem;"  data-aos="fade-in">
+        <strong>
+          <u>
+            <a href="{{resume_url.url}}">Download Resume</a>
+          </u>
+        </strong>
+      </div>
+    {% endif %}
+    
   </section><!-- End Hero -->
 
 
@@ -294,7 +304,7 @@
       </div>
 
     </div>
-  </section> 
+  </section>
   <!-- End Portfolio Section -->
 
   <!-- ======= Services Section ======= -->
